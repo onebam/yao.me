@@ -1,34 +1,28 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import PostDetails from "@/layouts/PostDetails.astro";
-import { getPath } from "@/utils/getPath";
-import getSortedPosts from "@/utils/getSortedPosts";
-
-export interface Props {
-  post: CollectionEntry<"blog">;
-}
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import BlogPostLayout from "../../../layouts/BlogPostLayout.astro";
+import { getPath } from "../../../utils/getPath";
+import { calculateReadingTime } from "../../../utils/readingTime";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft && !data.unlisted);
-  const postResult = posts.map((post) => ({
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
     params: { slug: getPath(post.id, post.filePath, false) },
     props: { post },
   }));
-
-  // Also include unlisted posts so they can be accessed via direct URL
-  const unlistedPosts = await getCollection("blog", ({ data }) => !data.draft && data.unlisted);
-  const unlistedResult = unlistedPosts.map((post) => ({
-    params: { slug: getPath(post.id, post.filePath, false) },
-    props: { post },
-  }));
-
-  return [...postResult, ...unlistedResult];
 }
 
-const { post } = Astro.props;
+type Props = {
+  post: CollectionEntry<"blog">;
+};
 
-const posts = await getCollection("blog");
-const sortedPosts = getSortedPosts(posts);
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = getPath(post.id, post.filePath, false);
+const readingTime = calculateReadingTime(post.body ?? "");
 ---
 
-<PostDetails post={post} posts={sortedPosts} />
+<BlogPostLayout {...post.data} slug={slug} readingTime={readingTime}>
+  <Content />
+</BlogPostLayout>

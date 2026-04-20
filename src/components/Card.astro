@@ -22,7 +22,7 @@ const headerProps = {
 };
 ---
 
-<li class="my-8">
+<li class="my-5">
   <div>
     <a
       href={getPath(id, filePath)}
@@ -36,7 +36,7 @@ const headerProps = {
         )
       }
     </a>
-    <div class="flex items-center gap-3 mb-3">
+    <div class="flex items-center gap-3 mb-1">
       <Datetime {pubDatetime} {modDatetime} {timezone} />
       <span class="text-sm italic opacity-80">• {readingTime}</span>
     </div>
@@ -59,7 +59,7 @@ const headerProps = {
           />
         </a>
       )}
-      <p class="opacity-80 flex-1">{description}</p>
+      <p class="opacity-80 flex-1 mt-1">{description}</p>
     </div>
   </div>
 </li>

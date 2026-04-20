@@ -1,9 +1,9 @@
 ---
-import IconBlueSky from "@/assets/icons/IconBlueSky.svg";
-import IconBrandX from "@/assets/icons/IconBrandX.svg";
+import IconCsdn from "@/assets/icons/IconCsdn.svg";
+import IconGitee from "@/assets/icons/IconGitee.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
-import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconMail from "@/assets/icons/IconMail.svg";
+import IconRss from "@/assets/icons/IconRss.svg";
 import { SOCIALS } from "@/constants";
 import LinkButton from "./LinkButton.astro";
 
@@ -15,27 +15,29 @@ const { centered = false } = Astro.props;
 
 const iconMap = {
   github: IconGitHub,
-  twitter: IconBrandX,
-  bluesky: IconBlueSky,
-  linkedin: IconLinkedin,
+  gitee: IconGitee,
+  csdn: IconCsdn,
   mail: IconMail,
+  rss: IconRss,
 };
 ---
 
-<div class:list={["flex-wrap justify-center gap-1", { flex: centered }]}>
+<div class:list={["flex flex-wrap items-center gap-3", { "justify-center": centered }]}>
   {
     SOCIALS.filter((social) => social.active).map((social) => {
       const IconComponent = iconMap[social.icon as keyof typeof iconMap];
+
       return (
         <LinkButton
           href={social.href}
-          class="p-2 hover:rotate-6 sm:p-1"
+          ariaLabel={social.linkTitle}
+          class="inline-flex items-center justify-center text-black transition-all duration-200 hover:-translate-y-0.5 hover:rotate-6 hover:text-black"
           title={social.linkTitle}
         >
           {IconComponent && (
-            <IconComponent class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+            <IconComponent class="inline-block size-7 fill-none stroke-current opacity-100 transition-transform duration-200 group-hover:scale-110" />
           )}
-          <span class="sr-only">{social.linkTitle}</span>
+          <span class="sr-only">{social.name}</span>
         </LinkButton>
       );
     })

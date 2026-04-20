@@ -1,0 +1,273 @@
+.about-hero {
+    padding: 56px 0 46px;
+}
+
+.about-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: clamp(24px, 5vw, 38px);
+    align-items: center;
+}
+
+.about-copy h1 {
+    max-width: 680px;
+    margin-bottom: 16px;
+    font-size: clamp(1.9rem, 3.8vw, 3.35rem);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+.about-copy p {
+    max-width: 680px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+}
+
+.fit-summary {
+    display: grid;
+    gap: 10px;
+    max-width: 680px;
+    margin-bottom: 24px;
+}
+
+.fit-summary div {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 12px;
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.fit-summary strong {
+    color: var(--accent);
+    font-size: 0.82rem;
+}
+
+.fit-summary span {
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+}
+
+.portrait-card {
+    position: relative;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.portrait-photo {
+    min-height: 360px;
+    border-radius: 22px;
+    background-image:
+        linear-gradient(180deg, transparent, rgba(5, 9, 20, 0.76)),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.portrait-caption {
+    position: absolute;
+    left: 34px;
+    right: 34px;
+    bottom: 34px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: rgba(5, 9, 20, 0.72);
+    backdrop-filter: blur(16px);
+}
+
+.portrait-caption strong,
+.portrait-caption span {
+    display: block;
+}
+
+.portrait-caption span {
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.about-card,
+.skill-category,
+.achievement-card,
+.philosophy-card {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.07);
+    transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+.about-card {
+    min-height: 190px;
+    padding: 18px;
+    border-radius: 20px;
+}
+
+.about-card:hover,
+.skill-category:hover,
+.achievement-card:hover,
+.philosophy-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.55);
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.about-card span,
+.philosophy-card span {
+    display: inline-flex;
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.about-card h3,
+.philosophy-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.02rem;
+}
+
+.about-card p,
+.philosophy-card p {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.pmp-card {
+    background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(45, 212, 191, 0.08)),
+        rgba(255, 255, 255, 0.07);
+}
+
+.positioning-box {
+    max-width: 860px;
+    padding: clamp(22px, 4vw, 34px);
+    border: 1px solid rgba(56, 189, 248, 0.24);
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(45, 212, 191, 0.06)),
+        rgba(255, 255, 255, 0.07);
+}
+
+.positioning-box p {
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.skill-category {
+    padding: 18px;
+    border-radius: 20px;
+}
+
+.skill-category h4 {
+    margin-bottom: 18px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.proof-layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.achievement-card {
+    padding: 18px;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.achievement-card strong,
+.achievement-card span {
+    display: block;
+}
+
+.achievement-card strong {
+    color: var(--accent);
+    font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+    line-height: 1;
+}
+
+.achievement-card span {
+    margin-top: 12px;
+    color: var(--text-secondary);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.philosophy-card {
+    padding: 18px;
+    border-radius: 22px;
+}
+
+@media (max-width: 1020px) {
+    .about-hero-layout,
+    .proof-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid,
+    .philosophy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .about-hero {
+        padding-top: 40px;
+    }
+
+    .portrait-photo {
+        min-height: 280px;
+    }
+
+    .fit-summary div {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .achievements-grid,
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+}

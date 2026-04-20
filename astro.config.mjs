@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
-import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -14,6 +13,9 @@ import AstroPWA from "@vite-pwa/astro";
 export default defineConfig({
   site: SITE.website,
   trailingSlash: "never",
+  devToolbar: {
+    enabled: false,
+  },
   markdown: {
     remarkPlugins: [
       remarkToc,
@@ -96,14 +98,13 @@ export default defineConfig({
         return item;
       }
     }),
-    react(),
     AstroPWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "peter-avatar.jpg"],
+      includeAssets: ["favicon.svg"],
       manifest: {
-        name: "Peter Steinberger",
-        short_name: "steipete",
-        description: "AI-powered tools from Swift roots to web frontiers. Everything I build is open source.",
+        name: SITE.title,
+        short_name: SITE.title,
+        description: SITE.desc,
         theme_color: "#006cac",
         background_color: "#fdfdfd",
         display: "standalone",
@@ -112,20 +113,9 @@ export default defineConfig({
         start_url: "/",
         icons: [
           {
-            src: "favicon.ico",
-            sizes: "48x48",
-            type: "image/x-icon",
-          },
-          {
-            src: "peter-avatar.jpg",
-            sizes: "192x192",
-            type: "image/jpeg",
-            purpose: "any",
-          },
-          {
-            src: "peter-avatar.jpg",
-            sizes: "512x512",
-            type: "image/jpeg",
+            src: "favicon.svg",
+            sizes: "any",
+            type: "image/svg+xml",
             purpose: "any maskable",
           },
         ],
@@ -178,8 +168,5 @@ export default defineConfig({
       },
     },
     plugins: [tailwindcss()],
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
   },
 });

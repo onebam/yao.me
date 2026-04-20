@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">YAO avatar placeholder</title>
+  <desc id="desc">A neutral YAO avatar placeholder.</desc>
+  <rect width="320" height="320" rx="160" fill="#006cac"/>
+  <text x="160" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="130" font-weight="700" fill="#fff">Y</text>
+</svg>

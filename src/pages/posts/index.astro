@@ -8,6 +8,8 @@ import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
+const description = "\u6280\u672f\u7b14\u8bb0\u3001\u9879\u76ee\u590d\u76d8\u3001\u6bcf\u65e5\u5fc3\u60c5\uff0c\u4ee5\u53ca\u4e00\u4e9b\u628a\u60f3\u6cd5\u53d8\u6210\u8f6f\u4ef6\u7684\u8fc7\u7a0b\u8bb0\u5f55\u3002";
+const title = "\u6240\u6709\u535a\u5ba2\u4e0e\u60f3\u6cd5";
 
 const months = [
   "January",
@@ -25,11 +27,12 @@ const months = [
 ];
 ---
 
-<Layout title={`Posts | ${SITE.title}`} description="Archive of all blog posts by Peter Steinberger. iOS, Swift, web development, and open source insights.">
+<Layout title={`Posts | ${SITE.title}`} description={description}>
   <Header />
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
-    <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
-    <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
+    <p class="mt-8 text-accent font-semibold">Posts</p>
+    <h1 class="text-2xl font-semibold sm:text-3xl">{title}</h1>
+    <p class="mt-2 mb-5 italic">{description}</p>
     {
       Object.entries(
         getPostsByGroupCondition(posts, (post) => {
@@ -39,8 +42,8 @@ const months = [
       )
         .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
         .map(([year, yearGroup]) => (
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-3 text-accent">
               {year}
               <sup class="text-sm ml-1">{yearGroup.length}</sup>
             </h2>
@@ -52,8 +55,8 @@ const months = [
             )
               .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
               .map(([month, monthGroup]) => (
-                <div class="mt-8">
-                  <h3 class="text-xl font-bold mb-4">
+                <div class="mt-5">
+                  <h3 class="text-xl font-bold mb-2">
                     {months[Number(month) - 1]}
                     <sup class="text-sm ml-1">{monthGroup.length}</sup>
                   </h3>

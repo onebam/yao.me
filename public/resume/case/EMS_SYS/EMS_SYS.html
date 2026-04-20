@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧能源管理系统 - 项目案例</title>
+    <link rel="stylesheet" href="../../shared/styles.css">
+    <link rel="stylesheet" href="EMS_SYS.css">
+</head>
+<body>
+    <global-header base-path="../../"></global-header>
+
+    <main class="main-content">
+        <div class="case-hero">
+            <div class="container">
+                <div class="breadcrumb"><a href="../case.html">项目</a> / 智慧能源管理系统</div>
+                <h1>智慧能源管理系统</h1>
+                <p class="case-subtitle">工业园区能源监控平台 · 工业物联网</p>
+                <div class="case-tags">
+                    <span class="tag">Blazor Server</span>
+                    <span class="tag">Modbus</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">ECharts</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="case-section">
+                <h2>项目背景</h2>
+                <p>我参与开发面向工业园区能源管理场景的 Web 监控平台，用来采集水、电、气等设备数据，实现能源计量、实时看板、异常检测和设备运维辅助。</p>
+            </section>
+
+            <section class="case-section">
+                <h2>技术实现</h2>
+                <p>我使用 Blazor Server 构建 Web 监控页面，用 Modbus TCP/RTU 接入工业设备，用 SQL Server + FreeSql 完成数据持久化和查询，用 ECharts 展示能源趋势，并结合 Welford 算法识别能耗波动异常。</p>
+            </section>
+
+            <section class="case-section">
+                <h2>我的工作</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3>核心功能</h3>
+                        <p>参与设备采集、数据解析、页面展示、异常报警等核心模块开发。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>通信接入</h3>
+                        <p>对接 Modbus TCP/RTU 设备，完成寄存器映射、数据缩放和状态解析。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Web 看板</h3>
+                        <p>使用 Blazor Server 构建电气、水务、燃气等分类监控页面。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>配置优化</h3>
+                        <p>优化设备参数配置、数据刷新、异常检测和告警推送流程。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>解决的问题</h2>
+                <div class="problem-solution">
+                    <div class="ps-item">
+                        <div class="ps-badge solution">通信</div>
+                        <h3>Modbus 双协议适配</h3>
+                        <p>封装 Modbus TCP/RTU 通信逻辑，适配不同工业设备和网络连接方式。这个能力适合能源管理、设备采集和工业物联网类系统。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">数据</div>
+                        <h3>数据持久化与看板</h3>
+                        <p>使用 SQL Server + FreeSql 管理能源数据，并通过 ECharts 展示实时趋势。系统把原始设备数据转化为可读的能耗指标和管理看板。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">可靠</div>
+                        <h3>工业级连接机制</h3>
+                        <p>支持断线重连、重试机制、连接超时和读取超时控制，降低通信异常影响。工业场景设备不稳定时，系统仍需要尽量保持可用。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">告警</div>
+                        <h3>能耗异常检测</h3>
+                        <p>结合 Welford 在线算法与阈值策略识别能耗波动异常，辅助运维判断。这让系统不只是展示数据，也能对异常用能进行主动提示。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>交付结果</h2>
+                <p>项目证明了我具备工业 Web 平台开发能力，能完成设备通信接入、数据持久化、实时看板和异常检测等能源管理核心功能。</p>
+                <div class="case-result">
+                    <div class="result-item">
+                        <span class="result-num">3类</span>
+                        <span class="result-label">水电气监控</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">7x24</span>
+                        <span class="result-label">稳定运行</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">配置化</span>
+                        <span class="result-label">设备接入</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">可视化</span>
+                        <span class="result-label">能源看板</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>能力证明</h2>
+                <p>这个项目证明我能参与工业 Web 平台开发，不仅理解设备通信和数据采集，也能把能源数据做成可视化、可配置、可运维的管理系统。</p>
+            </section>
+
+            <div class="back-btn-wrap">
+                <a href="../case.html" class="back-btn">← 返回项目列表</a>
+            </div>
+        </div>
+    </main>
+
+    <global-footer></global-footer>
+
+    <script src="../../shared/components.js"></script>
+    <script src="../../shared/script.js"></script>
+</body>
+</html>

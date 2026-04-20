@@ -11,14 +11,10 @@ const { noMarginTop = false } = Astro.props;
 
 <footer class:list={["w-full", { "mt-auto": !noMarginTop }]}>
   <Hr noPadding />
-  <div
-    class="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4"
-  >
+  <div class="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4">
     <Socials centered />
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <a href="https://github.com/steipete/steipete.me" target="_blank" rel="noopener noreferrer" class="hover:text-accent">
-        Steal this post ➜ CC BY 4.0 · Code MIT
-      </a>
+      <a href="/resume/index.html" class="font-bold hover:text-accent hover:scale-110 hover:underline underline-offset-4 transition-all duration-300">Learn More About Me.</a>
     </div>
   </div>
 </footer>

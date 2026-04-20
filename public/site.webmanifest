@@ -1,12 +1,12 @@
 {
-  "name": "Peter Steinberger",
-  "short_name": "Peter Steinberger",
-  "description": "iOS developer, entrepreneur, founder of PSPDFKit (acquired), vibe coding my next project",
+  "name": "YAO",
+  "short_name": "YAO",
+  "description": "工业自动化出身，正在用 AI 工具链把想法更快变成软件。",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32 48x48",
-      "type": "image/x-icon"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "start_url": "/",

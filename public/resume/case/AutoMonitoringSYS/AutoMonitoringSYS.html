@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能监控系统 - 项目案例</title>
+    <link rel="stylesheet" href="../../shared/styles.css">
+    <link rel="stylesheet" href="AutoMonitoringSYS.css">
+</head>
+<body>
+    <global-header base-path="../../"></global-header>
+
+    <main class="main-content">
+        <div class="case-hero">
+            <div class="container">
+                <div class="breadcrumb"><a href="../case.html">项目</a> / 智能监控系统</div>
+                <h1>智能监控系统</h1>
+                <p class="case-subtitle">工业自动化监控系统 · 上位机平台</p>
+                <div class="case-tags">
+                    <span class="tag">C# / WinForms</span>
+                    <span class="tag">PLC 通信</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">LiveCharts</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="case-section">
+                <h2>项目背景</h2>
+                <p>我围绕制造业自动化产线开发上位机监控平台，用来采集多区域设备状态、报警信息和生产数据，帮助现场人员更快发现异常、定位问题并追溯历史记录。</p>
+            </section>
+
+            <section class="case-section">
+                <h2>技术实现</h2>
+                <p>我使用 C# / .NET Framework / WinForms 完成客户端与界面交互，用 PLC 通信库和 NModbus 采集设备数据，用 SQL Server 存储历史数据与报警记录，用 LiveCharts 做趋势与状态可视化，并通过 log4net 归档运行日志。</p>
+            </section>
+
+            <section class="case-section">
+                <h2>我的工作</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3>独立交付</h3>
+                        <p>完成需求拆解、界面设计、核心功能开发、现场调试和持续优化。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>设备采集</h3>
+                        <p>负责 PLC 状态读取、设备状态解析、报警规则判断和历史数据记录。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>监控看板</h3>
+                        <p>实现设备状态、报警弹窗、产量趋势、排班信息和多区域视图切换。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>稳定性优化</h3>
+                        <p>封装采集任务、UI 刷新、日志归档和窗体生命周期管理，减少卡顿和任务泄漏。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>解决的问题</h2>
+                <div class="problem-solution">
+                    <div class="ps-item">
+                        <div class="ps-badge solution">通信</div>
+                        <h3>PLC 数据采集与解析</h3>
+                        <p>通过 PLC 通信库和 NModbus 采集多区域设备状态，并统一处理不同数据格式。这个部分证明我不仅会做页面，也理解工业设备通信和现场数据结构。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">看板</div>
+                        <h3>现场可视化</h3>
+                        <p>使用 WinForms + LiveCharts 展示设备状态、产量趋势、报警信息和运行指标。现场人员可以通过看板快速判断设备状态，而不是只看原始数据。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">稳定</div>
+                        <h3>异步任务管理</h3>
+                        <p>使用异步任务和 CancellationToken 管理采集生命周期，集中批量刷新 UI。这样能减少界面卡顿，也避免窗口切换后后台任务继续泄漏。</p>
+                    </div>
+                    <div class="ps-item">
+                        <div class="ps-badge solution">维护</div>
+                        <h3>日志与追溯</h3>
+                        <p>使用 SQL Server 存储历史数据，结合 log4net 进行日志归档，便于问题排查。系统出现异常时，可以通过报警记录和日志快速还原现场情况。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>交付结果</h2>
+                <p>项目证明了我能从现场需求出发，独立完成工业上位机系统开发与交付，覆盖设备通信、数据存储、报警联动、可视化看板和现场稳定性优化。</p>
+                <div class="case-result">
+                    <div class="result-item">
+                        <span class="result-num">20+</span>
+                        <span class="result-label">设备监控</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">5+</span>
+                        <span class="result-label">覆盖区域</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">24h</span>
+                        <span class="result-label">连续运行</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-num">闭环</span>
+                        <span class="result-label">报警与追溯</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h2>能力证明</h2>
+                <p>这个项目证明我能把工业现场需求转化为稳定运行的上位机系统，覆盖通信、数据、UI、报警、日志和现场交付。</p>
+            </section>
+
+            <div class="back-btn-wrap">
+                <a href="../case.html" class="back-btn">← 返回项目列表</a>
+            </div>
+        </div>
+    </main>
+
+    <global-footer></global-footer>
+
+    <script src="../../shared/components.js"></script>
+    <script src="../../shared/script.js"></script>
+</body>
+</html>

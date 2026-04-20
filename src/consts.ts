@@ -31,12 +31,12 @@ interface Site {
 
 // Site configuration
 export const SITE: Site = {
-  website: "https://steipete.me/",
-  author: "Peter Steinberger",
-  profile: "https://steipete.me/about",
-  desc: "AI-powered tools from Swift roots to web frontiers. Every commit lands on GitHub for you to fork & remix.",
-  title: "Peter Steinberger",
-  ogImage: "peter-avatar.jpg",
+  website: "https://yao997.cn/",
+  author: "YAO",
+  profile: "https://yao997.cn/about",
+  desc: "工业自动化出身，正在用 AI 工具链把想法更快变成软件。",
+  title: "YAO",
+  ogImage: "",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
@@ -44,13 +44,13 @@ export const SITE: Site = {
   showArchives: false,
   showBackButton: false,
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit on GitHub",
-    url: "https://github.com/steipete/steipete.me/edit/main/",
+    url: "",
   },
-  dynamicOgImage: true,
-  lang: "en",
-  timezone: "America/Los_Angeles",
+  dynamicOgImage: false,
+  lang: "zh-CN",
+  timezone: "Asia/Shanghai",
 };
 
 export const SITE_TITLE = SITE.title;
@@ -60,7 +60,7 @@ export const SITE_DESCRIPTION = SITE.desc;
 export const NAV_LINKS: SocialLink[] = [
   {
     href: "/",
-    label: "Blog",
+    label: "Home",
   },
   {
     href: "/about",
@@ -71,16 +71,20 @@ export const NAV_LINKS: SocialLink[] = [
 // Social media links
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/steipete",
+    href: "https://github.com/onebam",
     label: "GitHub",
   },
   {
-    href: "https://twitter.com/steipete",
-    label: "Twitter",
+    href: "https://gitee.com/ddup_yao",
+    label: "Gitee",
   },
   {
-    href: "https://bsky.app/profile/steipete.me",
-    label: "BlueSky",
+    href: "https://blog.csdn.net/m0_57445579",
+    label: "CSDN",
+  },
+  {
+    href: "mailto:hello@yao997.cn",
+    label: "Email",
   },
   {
     href: "/rss.xml",

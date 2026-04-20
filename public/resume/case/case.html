@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | YAO Portfolio</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="case.css">
+</head>
+<body>
+    <global-header base-path="../"></global-header>
+
+    <main class="main-content">
+        <section class="case-list-hero">
+            <div class="container">
+                <span class="eyebrow">Projects</span>
+                <h1>项目案例：工业软件交付 + AI 工具链实践。</h1>
+                <p>我把项目按三类能力展示：工业上位机开发、能源数据平台、AI 辅助个人网站。每个项目都围绕真实交付过程来写，重点说明我做了什么、解决了什么问题，以及项目能证明什么能力。</p>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="project-list">
+                    <article class="project-card project-monitor reveal" data-href="AutoMonitoringSYS/AutoMonitoringSYS.html">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <span class="project-index">01</span>
+                            <h3>智能监控系统</h3>
+                            <p class="project-subtitle">工业自动化监控系统</p>
+                            <p class="project-desc">面向制造业产线的多区域设备监控与报警联动平台，支持实时看板、报警弹窗、多视图切换和历史趋势分析。</p>
+                            <div class="project-tags">
+                                <span class="tag">WinForms</span>
+                                <span class="tag">PLC 通信</span>
+                                <span class="tag">LiveCharts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-energy reveal" data-href="EMS_SYS/EMS_SYS.html">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <span class="project-index">02</span>
+                            <h3>智慧能源管理系统</h3>
+                            <p class="project-subtitle">工业园区能源监控平台</p>
+                            <p class="project-desc">实现配电、水务、燃气等设备实时采集、监控与异常检测，用数据支撑园区能源管理和设备运维。</p>
+                            <div class="project-tags">
+                                <span class="tag">Blazor Server</span>
+                                <span class="tag">Modbus</span>
+                                <span class="tag">SQL Server</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-future reveal" data-href="future-project/future-project.html">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <span class="project-index">03</span>
+                            <h3>AI Vibe Coding 简历网站</h3>
+                            <p class="project-subtitle">个人品牌站 / AI 辅助开发 / Vercel 部署</p>
+                            <p class="project-desc">围绕 AI Vibe Coding 转型目标重构个人网站，完成信息架构、视觉优化、响应式适配、项目包装和自定义域名部署准备。</p>
+                            <div class="project-tags">
+                                <span class="tag">AI Coding</span>
+                                <span class="tag">Vercel</span>
+                                <span class="tag">响应式网站</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <global-footer></global-footer>
+
+    <script src="../shared/components.js"></script>
+    <script src="../shared/script.js"></script>
+    <script src="case.js"></script>
+</body>
+</html>
