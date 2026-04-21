@@ -8,8 +8,8 @@ import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
-const description = "\u6280\u672f\u7b14\u8bb0\u3001\u9879\u76ee\u590d\u76d8\u3001\u6bcf\u65e5\u5fc3\u60c5\uff0c\u4ee5\u53ca\u4e00\u4e9b\u628a\u60f3\u6cd5\u53d8\u6210\u8f6f\u4ef6\u7684\u8fc7\u7a0b\u8bb0\u5f55\u3002";
-const title = "\u6240\u6709\u535a\u5ba2\u4e0e\u60f3\u6cd5";
+const description = "技术笔记、项目复盘、每日心情，以及一些把想法变成软件的过程记录。";
+const title = "所有博客与想法";
 
 const months = [
   "January",

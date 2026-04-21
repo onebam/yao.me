@@ -25,18 +25,21 @@
 - **RSS**：自动生成的 RSS Feed
 
 ### 项目结构
-├── public/ # 静态资源（图片、字体、favicon）
+
+```
+├── public/               # 静态资源（图片、字体、favicon）
 ├── src/
-│ ├── assets/ # 组件使用的图标与图片
-│ ├── components/ # 可复用 UI 组件
-│ ├── content/ # 内容集合（博客文章，MDX 格式）
-│ ├── layouts/ # 页面布局模板
-│ ├── pages/ # 路由与页面
-│ ├── styles/ # 全局样式与 CSS
-│ └── utils/ # 工具函数
-├── astro.config.mjs # Astro 配置
-├── tailwind.config.mjs # Tailwind CSS 配置
-└── package.json # 依赖与脚本
+│   ├── assets/          # 组件使用的图标与图片
+│   ├── components/      # 可复用 UI 组件
+│   ├── content/         # 内容集合（博客文章，MDX 格式）
+│   ├── layouts/         # 页面布局模板
+│   ├── pages/           # 路由与页面
+│   ├── styles/          # 全局样式与 CSS
+│   └── utils/           # 工具函数
+├── astro.config.mjs     # Astro 配置
+├── tailwind.config.mjs  # Tailwind CSS 配置
+└── package.json         # 依赖与脚本
+```
 
 ### 常用命令
 

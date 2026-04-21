@@ -12,7 +12,7 @@
 .about-copy h1 {
     max-width: 680px;
     margin-bottom: 16px;
-    font-size: clamp(1.9rem, 3.8vw, 3.35rem);
+    font-size: clamp(1.25rem, 3.8vw, 2.5rem);
     line-height: 1.12;
     font-weight: 800;
     letter-spacing: -0.035em;
@@ -66,7 +66,7 @@
     border-radius: 22px;
     background-image:
         linear-gradient(180deg, transparent, rgba(5, 9, 20, 0.76)),
-        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
+        url("../image/about.avif");
     background-size: cover;
     background-position: center;
 }

@@ -4,7 +4,7 @@ class GlobalHeader extends HTMLElement {
         const currentPath = window.location.pathname;
         const links = [
             { href: `${basePath}home/home.html`, label: '首页', match: '/home/' },
-            { href: `${basePath}case/case.html`, label: '项目案例', match: '/case/' },
+            { href: `${basePath}case/case.html`, label: '项目', match: '/case/' },
             { href: `${basePath}about/about.html`, label: '关于我', match: '/about/' }
         ];
 
@@ -15,7 +15,7 @@ class GlobalHeader extends HTMLElement {
                         <span class="brand-mark">Y</span>
                         <span class="brand-copy">
                             <strong>YAO</strong>
-                            <small>AI Toolchain Developer</small>
+                            <small>Ideas to Products</small>
                         </span>
                     </a>
                     <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航">
@@ -56,7 +56,7 @@ class GlobalFooter extends HTMLElement {
                 <div class="footer-container">
                     <div>
                         <p class="footer-title">把现场经验写进系统，把 AI 工具链落到真实交付。</p>
-                        <p class="footer-subtitle">AI Vibe Coding / C# / Industrial Software / Automation Workflow</p>
+                        <p class="footer-subtitle">AI Vibe Coding / 工业软件 / 自动化工作流</p>
                     </div>
                     <div class="footer-links">
                         <a href="https://github.com/onebam" target="_blank" rel="noreferrer">GitHub</a>

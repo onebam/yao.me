@@ -120,6 +120,7 @@ a {
     display: flex;
     flex-direction: column;
     line-height: 1.1;
+    gap: 8px;
 }
 
 .brand-copy strong {
